@@ -9,22 +9,23 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- 점수 알림 부분 -->
-  <div id="ghostScore">
-    <div id="ghostScoreImg"></div>
-    <span>=10pt</span>
+<div id="title">
+    <h1>Ghost Rain</h1>
+</div>
+<div id="main">
+  <!-- 화면 상단 -->
+  <div id="top">
+    <div id="ghostScore">
+      <div id="ghostScoreImg"></div>
+      <span>=10pt</span>
+    </div>
+    <div id="myScore">
+      <span>Goal = </span>
+      <span id="nowScore">10</span>
+      <span>pt / 100pt</span>
+    </div>
   </div>
-  <span>Goal = </span>
-  <span id="myScore"></span>
-  <span>pt / 100pt</span>
-  <!-- 남은 하트 -->
-  <div id="hpHeart">
-    <span>HP</span>
-    <i class="fa-solid fa-heart"></i>
-    <i class="fa-solid fa-heart"></i>
-    <i class="fa-solid fa-heart"></i>
-  </div>
-  <!-- 배경 -->
+    <!-- 배경 -->
   <div id="bg">
     <!-- 용사 -->
     <span id="hero"></span>
@@ -32,6 +33,25 @@
     <button id="pauseBtn">
       <i class="fa-solid fa-pause"></i>
     </button>
+  </div>
+  <!-- 남은 하트 -->
+  <div id="hpHeart">
+    <span>HP</span>
+    <i class="fa-solid fa-heart"></i>
+    <i class="fa-solid fa-heart"></i>
+    <i class="fa-solid fa-heart"></i>
+  </div>
+
+  <div id="howTo">
+    <h1>게임방법</h1>
+    <p><i class="fa-solid fa-arrow-right"></i> : 오른쪽으로 이동</p>
+    <p><i class="fa-solid fa-arrow-left"></i> : 왼쪽으로 이동</p>
+    <p><i class="fa-solid fa-ghost"></i> 귀신에 닿으면 10포인트 획득!</p>
+    <p><i class="fa-solid fa-check"></i> 100포인트를 얻으면 승리!</p>
+  </div>
+</div>
+
+
   </div>
 </body>
 </html>

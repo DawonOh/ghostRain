@@ -1,0 +1,108 @@
+*{
+  box-sizing: border-box;
+}
+
+#title {
+  background-color: tomato;
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+}
+
+/* 전체 사이즈 조절 */
+#main {
+  width: 800px;
+  margin: 0 auto;
+}
+
+/* 배경 */
+#bg {
+  background: url(./images/bg.png) no-repeat;
+  width: 800px;
+  height: 600px;
+}
+
+/* 주인공 */
+#hero {
+  background: url(./images/hero.png) no-repeat;
+}
+
+/* 배경 상단 점수 */
+#top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#ghostScore {
+  display: flex;
+}
+
+#ghostScoreImg {
+  background: url(./images/ghost.png) no-repeat;
+  width: 45px;
+  height: 55px;
+  display: inline-block;
+}
+
+#ghostScore span {
+  margin-top: 5px;
+  margin-left: 5px;
+  font-size: 24px;
+}
+
+#myScore span {
+  font-size: 24px;
+}
+
+#nowScore {
+  color: tomato;
+  font-weight: 700;
+}
+
+/* 화면 하단 하트 */
+#hpHeart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#hpHeart *{
+  margin-left: 5px;
+  font-size: 24px;
+}
+
+#hpHeart i {
+  color: tomato;
+  font-size: 24px;
+}
+
+/* 일시정지 버튼 */
+#pauseBtn {
+  background: none;
+  border: none;
+  color: tomato;
+  font-size: 50px;
+  float: right;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+#pauseBtn:hover {
+  opacity: 0.8;
+}
+
+/* 게임방법 */
+#howTo {
+  width: 300px;
+}
+
+#howTo i {
+  color: tomato;
+}
+
+#howTo:hover i {
+  font-size: 1.1em;
+}
