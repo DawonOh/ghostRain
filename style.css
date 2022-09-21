@@ -21,11 +21,28 @@
   background: url(./images/bg.png) no-repeat;
   width: 800px;
   height: 600px;
+  position: relative;
 }
 
 /* 주인공 */
 #hero {
   background: url(./images/hero.png) no-repeat;
+  width: 35px;
+  height: 55px;
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 35px);
+}
+
+#hero.stop {
+  background-position: 0px;
+}
+#hero.right {
+  background-position: -105px;
+}
+#hero.left {
+  background-position: -70px;
 }
 
 /* 배경 상단 점수 */
