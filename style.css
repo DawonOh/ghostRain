@@ -1,4 +1,4 @@
-*{
+* {
   box-sizing: border-box;
 }
 
@@ -86,7 +86,7 @@
   margin-top: 10px;
 }
 
-#hpHeart *{
+#hpHeart * {
   margin-left: 5px;
   font-size: 24px;
 }
