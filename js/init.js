@@ -10,27 +10,26 @@ let heroLocaNum = Number(heroLocation.split("px")[0]);
 
 document.addEventListener("keydown", function (e) {
   //왼쪽 화살표 키를 눌렀을 때
-  if (e.key === "ArrowLeft") {
+  if (e.key === "ArrowLeft" && heroLocaNum > 0) {
     //keyCode is deprecated.
-
     //용사 방향 왼쪽으로 변경
     moveHero.className = "left";
-    console.log("Before : " + heroLocaNum);
+
+    // console.log("Before : " + heroLocaNum);
 
     moveHero.style.left = heroLocaNum - 1 + "px";
     heroLocaNum = heroLocaNum - 1;
-    console.log("After : " + heroLocaNum);
-
+    // console.log("After : " + heroLocaNum);
     //오른쪽 화살표 키를 눌렀을 때
-  } else if (e.key === "ArrowRight") {
+  } else if (e.key === "ArrowRight" && heroLocaNum < 765) {
     //용사 방향 오른쪽으로 변경
     moveHero.className = "right";
 
-    console.log("Before : " + heroLocaNum);
+    // console.log("Before : " + heroLocaNum);
 
     moveHero.style.left = heroLocaNum + 1 + "px";
     heroLocaNum = heroLocaNum + 1;
-    console.log("After : " + heroLocaNum);
+    // console.log("After : " + heroLocaNum);
   }
 });
 
