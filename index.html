@@ -52,7 +52,12 @@
       <p><i class="fa-solid fa-check"></i> : 100포인트를 얻으면 승리!</p>
     </div>
   </div>
-
+  <!-- 
+    <script>를 여러개 등록해도 하나의 자바스크립트 파일로 인식한다. 
+    setting.js에 변수를 설정하고 제일 먼저 <script>로 등록하면 아래 파일들에서도 사용할 수 있다.
+    이런식으로 파일의 순서가 매우 중요하다. 
+  -->
+  <script src="./js/setting.js"></script>
   <script src="./js/hero.js"></script>
   <script src="./js/init.js"></script>
   <script src="./js/ghost.js"></script>

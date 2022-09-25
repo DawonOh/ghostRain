@@ -1,10 +1,6 @@
-const GHOST_WIDTH = 45;
-const GHOST_HEIGHT = 54;
-const BG_HEIGHT = 600;
-
 //800px에서 유령 width를 뺀 755px 안에서 랜덤한 수를 구해야 한다.
 function randomNum() {
-  let random = Math.floor(Math.random() * 755);
+  let random = Math.floor(Math.random() * (BG_WIDTH - GHOST_WIDTH));
   return random;
 }
 
@@ -29,7 +25,7 @@ function createGhost() {
   backGround.appendChild(makeGhost);
 
   //유령이 아래로 내려오게 하기
-  setInterval(function(){
+  setInterval(function () {
     //유령 요소 접근해서 top 값 가져오기
     let ghostTop = makeGhost.style.top;
     console.log(ghostTop);
@@ -39,20 +35,19 @@ function createGhost() {
     console.log(ghostTopNum);
 
     //유령이 화면을 넘어가지 못하도록 처리
-    if(ghostTopNum >= BG_HEIGHT-GHOST_HEIGHT){
+    if (ghostTopNum >= BG_HEIGHT - GHOST_HEIGHT) {
       //화면 아래 닿으면 사라지게 하기
       makeGhost.remove();
       return;
     }
 
-    makeGhost.style.top = ghostTopNum + (BG_HEIGHT-GHOST_HEIGHT)/10 + "px";
-
-
-  },1000);
-
+    makeGhost.style.top = ghostTopNum + (BG_HEIGHT - GHOST_HEIGHT) / 10 + "px";
+  }, 1000);
 }
 
 createGhost();
 
 //함수를 실행하면 안된다! createGhost() 로 넣으면 안됨
-setInterval(createGhost,3000);
+setInterval(createGhost, 3000);
+
+//1. 유령과 용사의 top과 left 지점을 찾는다.
