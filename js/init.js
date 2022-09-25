@@ -17,8 +17,8 @@ document.addEventListener("keydown", function (e) {
 
     // console.log("Before : " + heroLocaNum);
 
-    moveHero.style.left = heroLocaNum - 1 + "px";
-    heroLocaNum = heroLocaNum - 1;
+    moveHero.style.left = heroLocaNum - 10 + "px";
+    heroLocaNum = heroLocaNum - 10;
     // console.log("After : " + heroLocaNum);
     //오른쪽 화살표 키를 눌렀을 때
   } else if (e.key === "ArrowRight" && heroLocaNum < 765) {
@@ -27,8 +27,8 @@ document.addEventListener("keydown", function (e) {
 
     // console.log("Before : " + heroLocaNum);
 
-    moveHero.style.left = heroLocaNum + 1 + "px";
-    heroLocaNum = heroLocaNum + 1;
+    moveHero.style.left = heroLocaNum + 10 + "px";
+    heroLocaNum = heroLocaNum + 10;
     // console.log("After : " + heroLocaNum);
   }
 });
