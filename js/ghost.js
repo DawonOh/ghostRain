@@ -56,7 +56,7 @@ function createGhost() {
   //=====
 
   //유령이 아래로 내려오게 하기
-  setInterval(function () {
+  let downGhost = setInterval(function () {
     let ghostTop = makeGhost.style.top;
     let horoLeft = heroElement.style.left;
     let ghostLeft = makeGhost.style.left;
@@ -78,14 +78,13 @@ function createGhost() {
         if (makeGhost.className !== "die") {
           let finalScore = addScore();
           console.log("addScore()");
-          isActive = false;
           if (finalScore < 100) {
             showMessage();
             ghostDie(makeGhost);
             return;
           } else if (finalScore === 100) {
             const BG = document.getElementById("bg");
-            BG.className = "finish";
+            BG.className = "finishGame";
             scoreElement.innerHTML = "100";
 
             const finishMessage = document.createElement("div");
@@ -96,6 +95,7 @@ function createGhost() {
             finishMessage.style.fontSize = "50px";
             finishMessage.style.color = "#fff";
             finishMessage.style.fontWeight = "700";
+            finishMessage.className = "finishMessage";
             finishMessage.innerHTML = "clear!";
             BG.appendChild(finishMessage);
 
@@ -103,6 +103,7 @@ function createGhost() {
             return;
           }
         } else if (makeGhost.className === "die") {
+          console.log("die!");
           return;
         }
       }
@@ -121,16 +122,14 @@ function createGhost() {
 
 //start버튼을 눌렀을 때 유령이 내려오게 한다.
 const startButton = document.getElementById("startBtn");
-const BG = document.getElementById("bg");
-function start() {
-  startButton.addEventListener("click", function () {
-    setInterval(createGhost, 3000);
-  });
-}
 
-if (BG.className !== "finish") {
-  start();
-} else {
-  clearInterval(start);
-}
-//함수를 실행하면 안된다! createGhost() 로 넣으면 안됨
+let reStart = true;
+
+startButton.addEventListener("click", function () {
+  if (reStart === true) {
+    console.log("게임시작!");
+    setInterval(createGhost, 3000);
+    reStart = false;
+    return;
+  }
+});
