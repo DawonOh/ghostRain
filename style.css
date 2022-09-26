@@ -24,6 +24,19 @@
   position: relative;
 }
 
+.finish {
+  filter: brightness(50%);
+}
+
+/* 유령을 죽이면 상단에 뜨는 메세지 */
+#message {
+  position: absolute;
+  left: calc(50% - 35px);
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+}
+
 /* 주인공 */
 #hero {
   background: url(./images/hero.png) no-repeat;
@@ -78,39 +91,27 @@
   font-weight: 700;
 }
 
-/* 화면 하단 하트 */
-#hpHeart {
+/* 화면 하단 시작버튼 */
+#startBtnDiv {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 10px;
 }
 
-#hpHeart * {
-  margin-left: 5px;
+#startBtn {
   font-size: 24px;
-}
-
-#hpHeart i {
-  color: tomato;
-  font-size: 24px;
-}
-
-/* 일시정지 버튼 */
-#pauseBtn {
-  background: none;
   border: none;
-  color: tomato;
-  font-size: 50px;
-  float: right;
-  cursor: pointer;
-  margin-right: 5px;
+  background-color: tomato;
+  color: #fff;
+  width: 300px;
+  border-radius: 3px;
 }
 
-#pauseBtn:hover {
+#startBtn:hover {
   opacity: 0.8;
+  cursor: pointer;
 }
-
 /* 게임방법 */
 #howTo {
   width: 300px;

@@ -1,5 +1,4 @@
-let moveHero = document.getElementById("hero");
-let heroLocation = getComputedStyle(moveHero).left;
+let heroLocation = getComputedStyle(heroElement).left;
 
 /*
 heroLocation에서 1px을 빼거나 더하려면 ?
@@ -16,26 +15,26 @@ document.addEventListener("keydown", function (e) {
   if (e.key === "ArrowLeft" && heroLocaNum > 0) {
     //keyCode is deprecated.
     //용사 방향 왼쪽으로 변경
-    moveHero.className = "left";
+    heroElement.className = "left";
 
     // console.log("Before : " + heroLocaNum);
 
-    moveHero.style.left = heroLocaNum - movePx + "px";
+    heroElement.style.left = heroLocaNum - movePx + "px";
     heroLocaNum = heroLocaNum - movePx;
     // console.log("After : " + heroLocaNum);
     //오른쪽 화살표 키를 눌렀을 때
   } else if (e.key === "ArrowRight" && heroLocaNum < BG_WIDTH - HERO_HEIGHT) {
     //용사 방향 오른쪽으로 변경
-    moveHero.className = "right";
+    heroElement.className = "right";
 
     // console.log("Before : " + heroLocaNum);
 
-    moveHero.style.left = heroLocaNum + movePx + "px";
+    heroElement.style.left = heroLocaNum + movePx + "px";
     heroLocaNum = heroLocaNum + movePx;
     // console.log("After : " + heroLocaNum);
   }
 });
 
 document.addEventListener("keyup", function (e) {
-  moveHero.className = "stop";
+  heroElement.className = "stop";
 });

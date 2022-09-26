@@ -21,3 +21,6 @@ function splitPxNum(str) {
   let splitResult = Number(str.split("px")[0]);
   return splitResult;
 }
+
+//영웅 요소 가져오기
+let heroElement = document.getElementById("hero");
